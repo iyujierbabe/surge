@@ -1,5 +1,6 @@
 #!name=Coolapk_ads_remove
 #!desc=去除酷安开屏广告
+#https://raw.githubusercontent.com/ddgksf2013/Scripts/master/coolapk.js
 
 [MITM]
 hostname = %APPEND% api.coolapk.com
