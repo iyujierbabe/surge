@@ -16,5 +16,3 @@ coolapk3 = type=http-response,pattern=^https?:\/\/api.coolapk.com\/v6\/main\/ind
 coolapk4 = type=http-response,pattern=^https?:\/\/api.coolapk.com\/v6\/feed\/replyList,requires-body=1,max-size=0,script-path=https://github.com/ddgksf2013/Scripts/raw/master/coolapk.js,script-update-interval=0
 # > 酷安_商品推广@ddgksf2013
 coolapk5 = type=http-response,pattern=^https?:\/\/api.coolapk.com\/v6\/feed\/detail,requires-body=1,max-size=0,script-path=https://github.com/ddgksf2013/Scripts/raw/master/coolapk.js,script-update-interval=0
-# > 酷安_屏蔽热词@ddgksf2013
-coolapk6 = type=http-response,pattern=^https?:\/\/api\.coolapk\.com\/v6\/search\?.*type=hotSearch,requires-body=1,max-size=0,script-path=https://github.com/ddgksf2013/Scripts/raw/master/coolapk.js,script-update-interval=0
