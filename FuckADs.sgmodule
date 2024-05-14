@@ -1,6 +1,5 @@
 #!name=FuckADs
 #!desc=移除广告联盟广告
-#!category=⚙️ ▸ NoAds
 #!homepage=https://gitlab.com/lodepuly/vpn_tool/-/tree/master/Tool/Loon/Plugin
 
 URL-REGEX, ^https:\/\/api-access\.pangolin-sdk-toutiao(\d|-b)?\.com\/api\/ad\/, DIRECT // 放行此条以确保广告联盟脚本的正常执行
