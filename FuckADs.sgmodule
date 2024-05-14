@@ -1,7 +1,8 @@
 #!name=FuckADs
 #!desc=移除广告联盟广告
-#!homepage=https://gitlab.com/lodepuly/vpn_tool/-/tree/master/Tool/Loon/Plugin
+#https://gitlab.com/lodepuly/vpn_tool/-/tree/master/Tool/Loon/Plugin
 
+[Rule]
 URL-REGEX, ^https:\/\/api-access\.pangolin-sdk-toutiao(\d|-b)?\.com\/api\/ad\/, DIRECT // 放行此条以确保广告联盟脚本的正常执行
 DOMAIN, is.snssdk.com, DIRECT // 放行此条以确保广告联盟脚本的正常执行
 
