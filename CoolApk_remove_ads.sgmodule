@@ -9,6 +9,7 @@ hostname = %APPEND% api.coolapk.com
 ^https:\/\/api\.coolapk\.com\/v6\/search\?.*type=hotSearch data="https://raw.githubusercontent.com/iyujierbabe/surge/main/reject-dict.json"
 
 [Script]
+移除酷安广告 = type=http-response,pattern=^https?:\/\/api.coolapk.com\/v6\/main\/init,requires-body=1,max-size=0,script-path=https://github.com/ddgksf2013/Scripts/raw/master/coolapk.js,script-update-interval=0
 移除酷安广告 = type=http-response,pattern=^https:\/\/api\.coolapk\.com\/v6\/feed\/(detail|replyList)\?,requires-body=1,max-size=0,script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/CoolApk/CoolApk_remove_ads.js,script-update-interval=0
 移除酷安广告 = type=http-response,pattern=^https:\/\/api\.coolapk\.com\/v6\/main\/(dataList|indexV8|init),requires-body=1,max-size=0,script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/CoolApk/CoolApk_remove_ads.js,script-update-interval=0
 移除酷安广告 = type=http-response,pattern=^https:\/\/api\.coolapk\.com\/v6\/page\/dataList\?,requires-body=1,max-size=0,script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/CoolApk/CoolApk_remove_ads.js,script-update-interval=0
