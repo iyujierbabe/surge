@@ -1,5 +1,5 @@
 #!name = 微信外部链接解锁
-#!desc = 解锁微信外部链接访问限制，跳过中间界面。
+#!desc = 解锁微信外部链接访问限制，跳过中间界面
 # https://gitlab.com/lodepuly/vpn_tool/-/tree/master/Tool/Loon/Plugin
 
 [Script]
