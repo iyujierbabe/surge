@@ -2,9 +2,6 @@
 #!desc=过滤酷安广告
 #https://gitlab.com/lodepuly/vpn_tool/-/tree/master/Tool/Loon/Plugin
 
-[MITM]
-hostname = %APPEND% api.coolapk.com
-
 [Map Local]
 # > 酷安_屏蔽热词
 ^https:\/\/api\.coolapk\.com\/v6\/search\?.*type=hotSearch data="https://raw.githubusercontent.com/iyujierbabe/surge/main/reject-dict.json"
@@ -16,6 +13,5 @@ hostname = %APPEND% api.coolapk.com
 酷安_评论广告 = type=http-response,pattern=^https?:\/\/api.coolapk.com\/v6\/feed\/replyList,requires-body=1,max-size=0,script-path=https://github.com/ddgksf2013/Scripts/raw/master/coolapk.js,script-update-interval=0
 酷安_商品推广 = type=http-response,pattern=^https?:\/\/api.coolapk.com\/v6\/feed\/detail,requires-body=1,max-size=0,script-path=https://github.com/ddgksf2013/Scripts/raw/master/coolapk.js,script-update-interval=0
 
-
-# > 酷安_商品推广@ddgksf2013
-^https?:\/\/api.coolapk.com\/v6\/feed\/detail url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/coolapk.js
+[MITM]
+hostname = %APPEND% api.coolapk.com
