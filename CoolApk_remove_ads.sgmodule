@@ -2,12 +2,6 @@
 #!desc=过滤酷安广告
 #https://gitlab.com/lodepuly/vpn_tool/-/tree/master/Tool/Loon/Plugin
 
-[Rule]
-# 酷安
-DOMAIN-SUFFIX,ulogs.umengcloud.com,REJECT-DROP
-DOMAIN-SUFFIX,toblog.ctobsnssdk.com,REJECT-NO-DROP
-DOMAIN-SUFFIX,adashbc.ut.taobao.com,REJECT-NO-DROP
-
 [Map Local]
 # > 酷安_屏蔽热词
 ^https:\/\/api\.coolapk\.com\/v6\/search\?.*type=hotSearch data="https://raw.githubusercontent.com/iyujierbabe/surge/main/reject-dict.json"
