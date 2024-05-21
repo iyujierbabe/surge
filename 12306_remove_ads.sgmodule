@@ -8,10 +8,8 @@ DOMAIN, ad.12306.cn, DIRECT
 
 [MITM]
 
-hostname = %APPEND% ad.12306.cn, mobile.12306.cn
+hostname = %APPEND% ad.12306.cn
 
 [Script]
 # 移除12306开屏广告
-移除12306开屏广告 = type=http-response,pattern=^https:\/\/ad\.12306\.cn\/ad\/ser\/getAdList$,requires-body=1,max-size=0,script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/12306/12306_remove_splashscreen_ads.js
-# 移除12306应用内广告
-移除12306应用内广告 = type=http-response,pattern=^https:\/\/mobile\.12306\.cn\/otsmobile\/app\/mgs\/mgw\.htm$,requires-body=1,max-size=0,script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/12306/12306_remove_ads.js
+移除12306开屏广告 = type=http-request, pattern=^https:\/\/ad\.12306\.cn\/ad\/ser\/getAdList$,requires-body=1,max-size=0,script-path=https://github.com/ddgksf2013/Scripts/raw/master/12306.js
