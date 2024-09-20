@@ -1,0 +1,11 @@
+#!name=Umetrip_remove_ads
+#!desc=过滤航旅纵横广告
+
+[Rule]
+URL-REGEX,^http?:\/\/(discardrp|startup)\.umetrip\.com\/gateway\/api\/umetrip\/native,REJECT
+
+[Script]
+移除首页广告 = type=http-response, pattern=^http?:\/\/(114\.115\.217\.129)|(home\.umetrip\.com)\/gateway\/api\/umetrip\/native$, requires-body=1, max-size=0, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Umetrip/Umetrip_remove_ads.js
+
+[MITM]
+hostname = %APPEND% 114.115.217.129, home.umetrip.com
