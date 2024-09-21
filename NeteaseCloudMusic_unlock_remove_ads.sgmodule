@@ -1,5 +1,5 @@
 #!name=NeteaseCloudMusic_unlock_remove_ads
-#!desc=解锁网易云音乐会员音频、音质;过滤网易云音乐广告，并允许自定义界面
+#!desc=解锁网易云音乐会员音频、音质; 过滤网易云音乐广告，并允许自定义界面
 #https://github.com/Yuheng0101/X/blob/main/Scripts/NeteaseCloudMusic/netease.sgmodule
 
 [Rule]
