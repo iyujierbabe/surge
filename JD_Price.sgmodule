@@ -5,7 +5,7 @@
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/blob/master/README.md
 
 [Script]
-京东比价 =  type = http-response, pattern= ^https?:\/\/api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig), requires-body=1,max-size=0, script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/JD/JD_Price.js
+京东比价 =  type = http-response, pattern= ^https?:\/\/api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig), requires-body=1,max-size=0, script-path = https://kelee.one/Resource/Script/JD/JD_Price.js
 
 [MITM]
 hostname = %APPEND% api.m.jd.com
