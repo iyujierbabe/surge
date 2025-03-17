@@ -1,5 +1,5 @@
 #!name=CoolApk_remove_ads
-#!desc=过滤酷安广告，使用JQLang重写并移除脚本，以提升处理性能降低内存开销。
+#!desc=过滤酷安广告（使用JQLang重写并移除脚本 以提升处理性能降低内存开销）
 #https://gitlab.com/lodepuly/vpn_tool/-/tree/master/Tool/Loon/Plugin
 #!date=2025-03-05 00:42:23
 
