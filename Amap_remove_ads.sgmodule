@@ -2,7 +2,7 @@
 #!desc=高德地图去广告（使用JQLang重写并移除脚本 以提升处理性能降低内存开销）
 #!icon=https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/Amap.png
 #!homepage=https://gitlab.com/lodepuly/vpn_tool/-/tree/master/Tool/Loon/Plugin
-#!date=2025-03-31 12:16:54
+#!date=2025-05-22 21:41:32
 
 [Rule]
 AND,((URL-REGEX,"^http:\/\/.+\/amdc\/mobileDispatch",extended-matching),(USER-AGENT,"AMapiPhone*")),REJECT
@@ -18,6 +18,7 @@ http-response-jq ^https:\/\/m5\.amap\.com\/ws\/shield\/search_poi\/homepage\? 'd
 http-response-jq ^https:\/\/m5-zb\.amap\.com\/ws\/sharedtrip\/taxi\/order_detail_car_tips\? 'delpaths([["data","carTips","data","popupInfo"]])'
 
 [Map Local]
+# 导航详情页 - 路线规划、地点详情页、搜索详情页、导航结束页
 ^https:\/\/m5\.amap\.com\/ws\/shield\/search\/new_hotword\? data-type=text data="{}" status-code=200
 
 ^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/card-service-(?:car-end|route-plan) data-type=text data="{}" status-code=200
@@ -26,6 +27,7 @@ http-response-jq ^https:\/\/m5-zb\.amap\.com\/ws\/sharedtrip\/taxi\/order_detail
 
 ^https:\/\/oss\.amap\.com\/ws\/banner\/lists\/\? data-type=text data="{}" status-code=200
 
+# 首页 - 推广卡片、红点角标、右上角动图、搜索框热词、左下角天气、消息横幅
 ^https:\/\/m5\.amap\.com\/ws\/aos\/main\/page\/product\/list\? data-type=text data="{}" status-code=200
 
 ^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/(?:main-page-assets|main-page-location|ridewalk-end-fc) data-type=text data="{}" status-code=200
@@ -38,6 +40,7 @@ http-response-jq ^https:\/\/m5-zb\.amap\.com\/ws\/sharedtrip\/taxi\/order_detail
 
 ^https:\/\/sns\.amap\.com\/ws\/msgbox\/pull_mp\? data-type=text data="{}" status-code=200
 
+# 打车页 - 红点角标、弹窗、天气图标、推广卡片
 ^https:\/\/m5-zb\.amap\.com\/ws\/boss\/(?:order\/car\/(?:feedback\/get_card_questions|feedback\/viptips|king_toolbox_car_bubble|remark\/satisfactionConf|rights_information)|tips\/onscene_visual_optimization) data-type=text data="{}" status-code=200
 
 ^https:\/\/m5-zb\.amap\.com\/ws\/boss\/pay\/web\/paySuccess\/info\/request data-type=text data="{}" status-code=200
@@ -50,8 +53,6 @@ http-response-jq ^https:\/\/m5-zb\.amap\.com\/ws\/sharedtrip\/taxi\/order_detail
 移除导航详情页底部酒店、处理附近页 = type=http-response, pattern=^https:\/\/m5\.amap\.com\/ws\/c3frontend\/(?:af-(?:hotel|launch)\/page\/main|af-nearby\/nearby), script-path=https://kelee.one/Resource/Script/Amap/Amap_remove_ads.js, requires-body=true
 
 移除路线规划推广 = type=http-response, pattern=^https:\/\/m5\.amap\.com\/ws\/perception\/drive\/(?:routeInfo|routePlan), script-path=https://kelee.one/Resource/Script/Amap/Amap_remove_ads.js, requires-body=true
-
-移除导航详情页推广 = type=http-response, pattern=^https:\/\/m5\.amap\.com\/ws\/shield\/search\/(?:common\/coupon\/info|poi\/detail), script-path=https://kelee.one/Resource/Script/Amap/Amap_remove_ads.js, requires-body=true
 
 移除搜索栏推广 = type=http-response, pattern=^https:\/\/m5\.amap\.com\/ws\/shield\/search_bff\/hotword\?, script-path=https://kelee.one/Resource/Script/Amap/Amap_remove_ads.js, requires-body=true
 
@@ -70,6 +71,8 @@ http-response-jq ^https:\/\/m5-zb\.amap\.com\/ws\/sharedtrip\/taxi\/order_detail
 移除打车页推广卡片、弹窗 = type=http-response, pattern=^https:\/\/m5-zb\.amap\.com\/ws\/boss\/(?:car\/order\/content_info|order_web\/friendly_information), script-path=https://kelee.one/Resource/Script/Amap/Amap_remove_ads.js, requires-body=true
 
 移除打车页红点角标、天气图标 = type=http-response, pattern=^https:\/\/m5-zb\.amap\.com\/ws\/promotion-web\/resource(\/home)?\?, script-path=https://kelee.one/Resource/Script/Amap/Amap_remove_ads.js, requires-body=true
+
+移除导航详情页推广 = type=http-response, pattern=^https:\/\/(?:info|m5)\.amap\.com\/ws\/shield\/search\/(?:common\/coupon\/info|poi\/detail), script-path=https://kelee.one/Resource/Script/Amap/Amap_remove_ads.js, requires-body=true
 
 [MITM]
 hostname = %APPEND% m5.amap.com, m5-zb.amap.com, oss.amap.com, sns.amap.com
