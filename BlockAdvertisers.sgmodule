@@ -1,4 +1,4 @@
-#!name = 广告平台拦截器
+i#!name = 广告平台拦截器
 #!desc = 拦截腾讯、字节跳动、快手、百度、邑盟、倍孜、艾狄墨搏、袤博、极光、个推、友盟、阿里、优比客思、秒针、网易、美团、小米、京东、天目、讯飞、泛连、锐讯灵通、聚次方、美数、嗨量、钧云、变现猫、章鱼、分秒、泰之菩、翼信、快易、数萤技术、方麟、益起、上量优选、新义互联、腾云天下、布里奇、塔酷、丽声、推啊、SupersonicAds、APPSAD等广告平台的广告请求，更适合iOS平台的应用。
 #!homepage = https://github.com/luestr/ProxyResource/blob/main/README.md
 #!date=2025-05-31 19:17:50
@@ -321,6 +321,5 @@ DOMAIN-SUFFIX,googlesyndication-cn.com,REJECT,extended-matching,pre-matching
 ^https:\/\/t-dsp\.pinduoduo\.com\/dspcb\/i\/mrk_ - reject
 ^https:\/\/images\.pinduoduo\.com\/mrk\/ - reject
 ^https:\/\/images\.pinduoduo\.com\/marketing_api\/ - reject
-
 [MITM]
 hostname = %APPEND% video-dsp.pddpic.com, t-dsp.pinduoduo.com, images.pinduoduo.com
