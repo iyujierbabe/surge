@@ -1,0 +1,9 @@
+#!name=Nicegram
+#!desc=解锁VIP
+
+[Script]
+# VIP
+Nicegram解锁VIP = type=http-response, pattern=^https?:\/\/(nicegram\.cloud\/api\/v\d\/(user\/info|unblock-feature\/get-settings)|restore-access\.indream\.app\/restoreAccess|api\.mbrx\.app\/v\d\/purchase\/ios\/transaction), script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/nicegram.js, requires-body=true
+
+[MITM]
+hostname = %APPEND% *.nicegram.cloud, restore-access.indream.app, api.mbrx.app
