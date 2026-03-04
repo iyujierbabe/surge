@@ -1,7 +1,7 @@
 #!name=HTTPDNSBlocker
 #!desc=拦截常见的HTTPDNS服务，以确保这些请求都能够在Surge的DNS框架下工作。
 #!homepage=https://github.com/luestr/ProxyResource/blob/main/README.md
-#!date=2025-12-29 17:33:55
+#!date=2026-03-03 10:07:10
 
 [Rule]
 DOMAIN-KEYWORD,httpdns,REJECT,extended-matching,pre-matching
