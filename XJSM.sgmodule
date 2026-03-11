@@ -1,0 +1,11 @@
+#!name = 星际使命
+#!desc = 破解
+#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/blob/master/README.md
+#!date=2026-03-06
+
+[Script]
+
+星际使命 = type=http-response, pattern=^https?:\/\/star.jvplay.cn\/v2\/storage, script-path=https://raw.githubusercontent.com/WeiGiegie/666/main/xjsm.js, requires-body=true, timeout=10
+
+[MITM]
+hostname = %APPEND% star.jvplay.cn
